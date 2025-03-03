@@ -1,0 +1,21 @@
+.contacts {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
