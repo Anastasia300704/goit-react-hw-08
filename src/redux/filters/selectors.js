@@ -1,2 +1,1 @@
-// redux/filters/selectors.js
-export const getFilter = state => state.filters.filter;
+export const selectNameFilter = state => state.filters.name;

@@ -1,11 +1,8 @@
-// redux/auth/operations.js
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// Устанавливаем базовый URL для запросов
 axios.defaults.baseURL = 'https://connections-api.goit.global';
 
-// Функция для установки и удаления токена в заголовке
 const token = {
   set(tokenValue) {
     axios.defaults.headers.common.Authorization = `Bearer ${tokenValue}`;
@@ -44,7 +41,7 @@ export const login = createAsyncThunk(
 );
 
 // Логаут
-export const logout = createAsyncThunk(
+export const logOut = createAsyncThunk(
   'auth/logout',
   async (_, thunkAPI) => {
     try {
@@ -56,7 +53,6 @@ export const logout = createAsyncThunk(
   }
 );
 
-// Обновление (рефреш) пользователя по токену
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {

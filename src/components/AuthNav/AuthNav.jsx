@@ -1,4 +1,3 @@
-// components/AuthNav/AuthNav.jsx
 import { NavLink } from 'react-router-dom';
 
 const AuthNav = () => {

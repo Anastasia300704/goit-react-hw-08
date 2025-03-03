@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts, deleteContact } from '../../redux/contacts/operations';
 import { getContacts } from '../../redux/contacts/selectors';
-
 import styles from './ContactsPage.module.css';
 
 const ContactsPage = () => {
