@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
-
+import LoginForm from '../../components/LoginForm/LoginForm';
 
 const RegistrationPage = () => {
   const [name, setName] = useState('');

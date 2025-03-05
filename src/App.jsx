@@ -24,11 +24,11 @@ export const App = () => {
      <div>Loading...</div>
     ) : (
       <Layout>
-        <Routes>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<RestrictedRoute component={LoginPage} />} />
           <Route path="/register" element={<RestrictedRoute component={RegistrationPage} />} />
           <Route path="/contacts" element={<PrivateRoute component={ContactsPage} />} />
-          <Route path="/" element={<HomePage />} />
         </Routes>
       </Layout>
     )
