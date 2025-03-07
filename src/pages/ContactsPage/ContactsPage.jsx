@@ -44,7 +44,7 @@ const ContactsPage = () => {
         {contacts.map(contact => (
           <li key={contact.id} className={styles.item}>
             <div>
-              <strong>{contact.name}</strong>: {contact.number}
+              <strong>{contact.name}</strong>: {contact.phone}
             </div>
             <div className={styles.actions}>
               <button onClick={() => handleEdit(contact)}>Edit</button>
