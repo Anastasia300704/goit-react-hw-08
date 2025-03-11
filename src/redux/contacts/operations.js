@@ -17,7 +17,7 @@ export const fetchContacts = createAsyncThunk(
 
 export const addContact = createAsyncThunk(
   'contacts/addContact',
-  async ({ name, number }, thunkAPI) => {
+  async ({ name, phone: number }, thunkAPI) => {
     try {
       const response = await axios.post(`${CONTACTS_BASE_URL}`, { name, number });
       return response.data;
@@ -30,6 +30,9 @@ export const addContact = createAsyncThunk(
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (contactId, thunkAPI) => {
+     if (!contactId) {
+      return thunkAPI.rejectWithValue('Contact ID is required');
+    }
     try {
       await axios.delete(`${CONTACTS_BASE_URL}/${contactId}`);
       return contactId;
