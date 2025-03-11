@@ -108,7 +108,7 @@ const ContactsPage = () => {
           filteredContacts.map(contact => (
             <li key={contact.id} className={styles.item}>
               <div>
-                <strong>{contact.name}</strong>: {contact.phone}
+                <strong>{contact.name}</strong>: {contact.number}
               </div>
               <div className={styles.actions}>
                 <button onClick={() => handleEdit(contact)}>Edit</button>
