@@ -23,6 +23,7 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   const handleDelete = (id) => {
+     console.log("Удаление контакта с ID:", id);
     setSelectedContact(id);
     setIsModalOpen(true);
   };

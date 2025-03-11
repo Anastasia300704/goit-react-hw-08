@@ -30,9 +30,11 @@ export const addContact = createAsyncThunk(
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (contactId, thunkAPI) => {
-     if (!contactId) {
-      return thunkAPI.rejectWithValue('Contact ID is required');
-    }
+   if (!contactId) {
+  console.error("Ошибка: передан неверный contactId", contactId);
+  return thunkAPI.rejectWithValue('Неверный ID контакта');
+}
+
     try {
       await axios.delete(`${CONTACTS_BASE_URL}/${contactId}`);
       return contactId;
