@@ -23,7 +23,6 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   const handleDelete = (id) => {
-     console.log("Удаление контакта с ID:", id);
     setSelectedContact(id);
     setIsModalOpen(true);
   };
@@ -107,13 +106,13 @@ const ContactsPage = () => {
       <ul className={styles.list}>
         {filteredContacts.length > 0 ? (
           filteredContacts.map(contact => (
-            <li key={contact.id} className={styles.item}>
+            <li key={contact._id} className={styles.item}>
               <div>
                 <strong>{contact.name}</strong>: {contact.number}
               </div>
               <div className={styles.actions}>
                 <button onClick={() => handleEdit(contact)}>Edit</button>
-                <button onClick={() => handleDelete(contact.id)}>Delete</button>
+                <button onClick={() => handleDelete(contact._id)}>Delete</button>
               </div>
             </li>
           ))
