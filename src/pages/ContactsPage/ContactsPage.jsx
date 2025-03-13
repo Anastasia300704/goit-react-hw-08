@@ -120,16 +120,9 @@ const ContactsPage = () => {
           <li>No contacts found</li>
         )}
       </ul>
-
-      {isModalOpen && (
-        <ConfirmationModal
-          isOpen={isModalOpen}
-          onRequestClose={() => setIsModalOpen(false)}
-          onConfirm={confirmDelete}
-        />
-      )}
     </div>
   );
 };
 
 export default ContactsPage;
+
